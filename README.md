@@ -23,7 +23,7 @@ The API also expose and API which fetch all the movies data stored in DB.
 1.Hit the API using the path "/movies/search?t=" with valid Movies titles. User will be able to see the data based on User role.
 2.Hit the API with Endpoint "/movies" to get All the movie details.
 
-##Note
+## Note
 BASIC USER (user/123456) will be able to search only the movies after 2010 from OMDB and cannot fetch all the movies' data from DB.
 
 PREMIUM USER (admin/123456) will be able to search all the movies from OMDB and can fetch all the available movies' data from DB along with filter and sorting.
