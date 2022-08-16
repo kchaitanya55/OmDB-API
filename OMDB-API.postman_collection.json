@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "a6073c33-33b1-41c5-bf67-902f27713297",
+		"name": "OMDB-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Basic User before 2010",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Basic User before 2010",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/movies/search?t=d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"movies",
+								"search"
+							],
+							"query": [
+								{
+									"key": "t",
+									"value": "d"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Set-Cookie",
+							"value": "JSESSIONID=E5CF4C74F6237B76C9E397CB338885DD; Path=/; HttpOnly"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Aug 2022 07:00:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 401,\n    \"message\": \"You are UnAuthorized to access movies before Year 2010 as you are BASIC user\",\n    \"timeStamp\": 1660633226307\n}"
+				}
+			]
+		},
+		{
+			"name": "Basic User after 2010",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Basic User after 2010",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/movies/search?t=major",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"movies",
+								"search"
+							],
+							"query": [
+								{
+									"key": "t",
+									"value": "major"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Aug 2022 07:01:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"imdbID\": \"tt9851854\",\n    \"Title\": \"Major\",\n    \"Year\": \"2022\",\n    \"Rated\": \"N/A\",\n    \"Released\": \"03 Jun 2022\",\n    \"Runtime\": \"150 min\",\n    \"Genre\": \"Action, Biography, Drama\",\n    \"Director\": \"Sashi Kiran Tikka\",\n    \"Writer\": \"Adivi Sesh, Abburi Ravi\",\n    \"Actors\": \"Sobhita Dhulipala, Adivi Sesh, Saiee Manjrekar\",\n    \"Language\": \"Telugu, Hindi, Malayalam\",\n    \"Country\": \"India\",\n    \"Awards\": \"N/A\",\n    \"Poster\": \"https://m.media-amazon.com/images/M/MV5BYWI2ODNjMDktZjcxNS00YThkLTljMDUtMGIyOTg3ZjY2MjlhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg\",\n    \"Metascore\": \"N/A\",\n    \"imdbRating\": \"8.3\",\n    \"imdbVotes\": \"17,736\",\n    \"Type\": \"movie\",\n    \"DVD\": \"N/A\",\n    \"BoxOffice\": \"N/A\",\n    \"Production\": \"N/A\",\n    \"Website\": \"N/A\",\n    \"Response\": \"True\",\n    \"Ratings\": [\n        {\n            \"Source\": \"Internet Movie Database\",\n            \"Value\": \"8.3/10\"\n        },\n        {\n            \"Source\": \"Rotten Tomatoes\",\n            \"Value\": \"86%\"\n        }\n    ],\n    \"Aggregate Rating (100)\": 84.5\n}"
+				}
+			]
+		},
+		{
+			"name": "Premium User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Premium User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/movies/search?t=marvel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"movies",
+								"search"
+							],
+							"query": [
+								{
+									"key": "t",
+									"value": "marvel"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Aug 2022 07:02:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"imdbID\": \"tt4154664\",\n    \"Title\": \"Captain Marvel\",\n    \"Year\": \"2019\",\n    \"Rated\": \"PG-13\",\n    \"Released\": \"08 Mar 2019\",\n    \"Runtime\": \"123 min\",\n    \"Genre\": \"Action, Adventure, Sci-Fi\",\n    \"Director\": \"Anna Boden, Ryan Fleck\",\n    \"Writer\": \"Anna Boden, Ryan Fleck, Geneva Robertson-Dworet\",\n    \"Actors\": \"Brie Larson, Samuel L. Jackson, Ben Mendelsohn\",\n    \"Language\": \"English\",\n    \"Country\": \"United States, Australia\",\n    \"Awards\": \"9 wins & 56 nominations\",\n    \"Poster\": \"https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_SX300.jpg\",\n    \"Metascore\": \"64\",\n    \"imdbRating\": \"6.8\",\n    \"imdbVotes\": \"544,177\",\n    \"Type\": \"movie\",\n    \"DVD\": \"28 May 2019\",\n    \"BoxOffice\": \"$426,829,839\",\n    \"Production\": \"N/A\",\n    \"Website\": \"N/A\",\n    \"Response\": \"True\",\n    \"Ratings\": [\n        {\n            \"Source\": \"Internet Movie Database\",\n            \"Value\": \"6.8/10\"\n        },\n        {\n            \"Source\": \"Rotten Tomatoes\",\n            \"Value\": \"79%\"\n        },\n        {\n            \"Source\": \"Metacritic\",\n            \"Value\": \"64/100\"\n        }\n    ],\n    \"Aggregate Rating (100)\": 70.33\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetch All",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Fetch All",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/movies?sort=ye_ar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "ye_ar"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 Aug 2022 07:05:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_embedded\": {\n        \"movies\": [\n            {\n                \"imdbID\": \"tt9851854\",\n                \"Title\": \"Major\",\n                \"Year\": \"2022\",\n                \"Rated\": \"N/A\",\n                \"Released\": \"03 Jun 2022\",\n                \"Runtime\": \"150 min\",\n                \"Genre\": \"Action, Biography, Drama\",\n                \"Director\": \"Sashi Kiran Tikka\",\n                \"Writer\": \"Adivi Sesh, Abburi Ravi\",\n                \"Actors\": \"Sobhita Dhulipala, Adivi Sesh, Saiee Manjrekar\",\n                \"Language\": \"Telugu, Hindi, Malayalam\",\n                \"Country\": \"India\",\n                \"Awards\": \"N/A\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BYWI2ODNjMDktZjcxNS00YThkLTljMDUtMGIyOTg3ZjY2MjlhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg\",\n                \"Metascore\": \"N/A\",\n                \"imdbRating\": \"8.3\",\n                \"imdbVotes\": \"17,736\",\n                \"Type\": \"movie\",\n                \"DVD\": \"N/A\",\n                \"BoxOffice\": \"N/A\",\n                \"Production\": \"N/A\",\n                \"Website\": \"N/A\",\n                \"Response\": \"True\",\n                \"Aggregate Rating (100)\": 84.5,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:8083/movies/1\"\n                    },\n                    \"movie\": {\n                        \"href\": \"http://localhost:8083/movies/1\"\n                    }\n                }\n            },\n            {\n                \"imdbID\": \"tt4154664\",\n                \"Title\": \"Captain Marvel\",\n                \"Year\": \"2019\",\n                \"Rated\": \"PG-13\",\n                \"Released\": \"08 Mar 2019\",\n                \"Runtime\": \"123 min\",\n                \"Genre\": \"Action, Adventure, Sci-Fi\",\n                \"Director\": \"Anna Boden, Ryan Fleck\",\n                \"Writer\": \"Anna Boden, Ryan Fleck, Geneva Robertson-Dworet\",\n                \"Actors\": \"Brie Larson, Samuel L. Jackson, Ben Mendelsohn\",\n                \"Language\": \"English\",\n                \"Country\": \"United States, Australia\",\n                \"Awards\": \"9 wins & 56 nominations\",\n                \"Poster\": \"https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_SX300.jpg\",\n                \"Metascore\": \"64\",\n                \"imdbRating\": \"6.8\",\n                \"imdbVotes\": \"544,177\",\n                \"Type\": \"movie\",\n                \"DVD\": \"28 May 2019\",\n                \"BoxOffice\": \"$426,829,839\",\n                \"Production\": \"N/A\",\n                \"Website\": \"N/A\",\n                \"Response\": \"True\",\n                \"Aggregate Rating (100)\": 70.33,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:8083/movies/2\"\n                    },\n                    \"movie\": {\n                        \"href\": \"http://localhost:8083/movies/2\"\n                    }\n                }\n            }\n        ]\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://localhost:8083/movies?sort=ye_ar\"\n        },\n        \"profile\": {\n            \"href\": \"http://localhost:8083/profile/movies\"\n        },\n        \"search\": {\n            \"href\": \"http://localhost:8083/movies/search\"\n        }\n    },\n    \"page\": {\n        \"size\": 20,\n        \"totalElements\": 2,\n        \"totalPages\": 1,\n        \"number\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}
